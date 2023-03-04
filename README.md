@@ -35,7 +35,7 @@ The URL is: **`https://example.com/remote_mysql.php?s64=U0VMRUNUICogRlJPTSB1c2Vy
 $data="";
 $sql = "SELECT * FROM users WHERE 1";
 $s64 = base64_encode($sql);
-$url = "https://dev.horvath-barna.hu/remote_mysql.php?s64=".$s64."&db=exampledb1&pwd=0000";
+$url = "https://example.com/remote_mysql.php?s64=".$s64."&db=exampledb1&pwd=0000";
 $data = file_get_contents($url);
 $data = json_decode($data); //To array
 ```
