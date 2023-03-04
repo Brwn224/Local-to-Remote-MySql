@@ -22,7 +22,7 @@ Suppose you upload this php file to the root folder of your hosting.
 > Your domain: example.com
 > Your password: 1234
 
-The URL is: **https://example.com/remote_mysql.php?s64=U0VMRUNUICogRlJPTSB1c2VycyBXSEVSRSAx&db=exampleDb1&pwd=1234**
+The URL is: **`https://example.com/remote_mysql.php?s64=U0VMRUNUICogRlJPTSB1c2VycyBXSEVSRSAx&db=exampleDb1&pwd=1234`**
 
 ## How to send query to this file:
 -  Build the sql query and save it to a string variable
