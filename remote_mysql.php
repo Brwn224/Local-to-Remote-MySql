@@ -8,7 +8,7 @@ if(isset($_GET['pwd']) || isset($_POST['pwd'])){
     } else{
         $pwd = htmlspecialchars($_GET['pwd']);
     }
-    if($pwd == 3275){
+    if($pwd == 0000){ //Defina a password here
 
         //set headers
         header('Access-Control-Allow-Origin: *');
@@ -28,10 +28,10 @@ if(isset($_GET['pwd']) || isset($_POST['pwd'])){
         $str = base64_decode($str);
         $sql = $str;
 
-        //Connection data
+        //Connection data / Fill out your connection details
         $servername = "localhost";
-        $username = "horvathbarnsql";
-        $password = 'sql0kHNmW';
+        $username = "root";
+        $password = '';
         $dbname = $database;
         $port = "3306";
 
@@ -50,7 +50,7 @@ if(isset($_GET['pwd']) || isset($_POST['pwd'])){
 
         //query
         $result = $conn->query($sql);
-        if(str_contains($sql, "SELECT")){ //Download data
+        if(str_contains($sql, "SELECT")){ //Select data
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
                     $json[] = $row;
