@@ -8,7 +8,7 @@ if(isset($_GET['pwd']) || isset($_POST['pwd'])){
     } else{
         $pwd = htmlspecialchars($_GET['pwd']);
     }
-    if($pwd == 0000){ //Defina a password here
+    if($pwd == 0000){ //Define a password here
 
         //set headers
         header('Access-Control-Allow-Origin: *');
